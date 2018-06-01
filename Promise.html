@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise</title>
+</head>
+<body>
+<script>
+ 
+    //  let p = new Promise((resolve,reject)=>{
+    //      setTimeout(function(){
+    //          var num = Math.ceil(Math.random()*10)
+    //          if(num<=5){
+    //              resolve(num)
+    //          }
+    //          else{
+    //              reject('数字太大了')
+    //          }
+    //      },1000)
+    //  })
+     
+     //reject用法
+    //  p.then((data)=>{
+    //      console.log('resolved',data)
+    //  },(err)=>{
+    //      console.log('rejected',err)
+    //  })
+
+
+    //catch的用法
+    // p.then((data) => {
+    // console.log('resolved',data);
+    // console.log(somedata); //此处的somedata未定义
+    // })
+    // .catch((err) => {
+    //     console.log('rejected',err);
+    // })
+
+
+    //all的用法
+    // let p1=new Promise(function(resolve,reject){})
+    // let p2=new Promise(function(resolve,reject){})
+    // let p3=new Promise(function(resolve,reject){})
+
+    // let p = Promise.all([p1,p2,p3])
+    // p.then(function(){
+    //     // 三个都成功则成功  
+    // },function(){
+    //     // 三个都成功则成功  
+    // })
+
+    //race的用法
+    // function requestImg(){
+    //     var p = new Promise((resolve,reject)=>{
+    //         var img = new Image();
+    //         img.onload=()=>{
+    //             resolve(img)
+    //         }
+    //         img.src='图片的路径'
+    //     })
+    //     return p;
+    // }
+    // function timeout(){
+    //     var p = new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             reject('图片请求超时')
+    //         },5000)
+    //     })
+    //     return p;
+    // }
+    // Promise.race([requestImt(),timeout()]).then((data)=>{
+    //     console.log(data)
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+</script>
+</body>
+</html>
